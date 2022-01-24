@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Grain chain test" parallel="tests" thread-count="6">
+    <listeners>
+        <listener class-name="test.listeners.Listeners"/>
+    </listeners>
+    <parameter name="browserName" value="Chrome"/>
+    <test name="Search test">
+        <classes>
+            <class name="test.search.SearchTest">
+                <methods>
+                    <include name ="searchTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
